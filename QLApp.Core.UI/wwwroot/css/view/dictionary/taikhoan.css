@@ -1,0 +1,10 @@
+﻿.page-content .page_row .box .box_right #password_tk {
+  position: relative; }
+
+.page-content .page_row .box .box_right .child-password {
+  position: absolute;
+  right: 28px;
+  margin: 4px 0 0 0; }
+
+.box_taikhoan .box_right {
+  border: none !important; }

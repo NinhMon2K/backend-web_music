@@ -1,0 +1,16 @@
+﻿@import "../common/_color.scss";
+
+.caret {
+    color: $gray-strong;
+    content: "";
+    border-top: 4.5px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 0;
+    position: relative;
+}
+
+.list-group-item {
+    padding: 8px 12px;
+    border: none;
+}

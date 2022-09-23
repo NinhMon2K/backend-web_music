@@ -1,0 +1,100 @@
+﻿@import "../common/_color.scss";
+
+
+.app-btn {
+    height: 32px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
+    box-shadow: none;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px 16px;
+    min-width: 96px;
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .caret {
+        color: #fff;
+    }
+
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+
+    &.btn-outline-app {
+        border-color: $app;
+        background-color: #fff;
+        color: $app;
+
+        &:hover, &:focus, &:active {
+            border-color: $app-light;
+            background-color: $app-light;
+            color: #fff;
+
+            .caret {
+                color: #fff;
+            }
+        }
+    }
+
+    &.btn-app {
+        border-color: $app;
+        background-color: $app;
+        color: #fff;
+
+        &:hover, &:focus, &:active {
+            border-color: $app-light;
+            background-color: $app-light;
+        }
+
+        &.btn-gray {
+            &:hover, &:focus, &:active {
+                border-color: $gray;
+                background-color: $gray;
+            }
+        }
+
+        .caret {
+            color: #fff;
+        }
+    }
+
+    &.btn-app-common {
+        border-color: none;
+        background-color: $app;
+        color: #fff;
+        background-image: linear-gradient( 185.95deg,#39bff4 0%,#6068ee 100%);
+
+        &:hover, &:focus, &:active {
+            background-image: linear-gradient( .95deg,#396ff4 0%,#6068ee 100%);
+        }
+
+        &.btn-gray {
+            &:hover, &:focus, &:active {
+                border-color: $gray;
+                background-color: $gray;
+            }
+        }
+
+        .caret {
+            color: #fff;
+        }
+    }
+
+    &.btn-transparent {
+        border-color: #afafaf;
+        background-color: transparent;
+        color: #fff;
+
+        &:hover, &:focus, &:active {
+            border-color: $app-light;
+            background-color: $app-light;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+﻿body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+.main-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.login-partial {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+  background: url("/images/background-login.jpg") no-repeat fixed center;
+  background-size: cover; }
+  .login-partial .login-page {
+    width: 500px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .login-partial .login-page .login-container {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      width: 1000%; }
+      .login-partial .login-page .login-container .login-content {
+        width: 420px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px; }
+        .login-partial .login-page .login-container .login-content .top-login {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .login-partial .login-page .login-container .login-content .top-login .logo-phone {
+            width: 140px;
+            height: 128px;
+            border-radius: 50%;
+            background-image: url("/images/logo.jpg");
+            background-position: center;
+            background-size: cover; }
+          .login-partial .login-page .login-container .login-content .top-login .name-phone {
+            font-size: 20px;
+            color: #396ff4;
+            margin-top: -16px;
+            font-weight: bolder; }
+        .login-partial .login-page .login-container .login-content .app-name {
+          padding: 16px 0;
+          font-size: 24px;
+          font-weight: bold; }
+        .login-partial .login-page .login-container .login-content .app-content-name {
+          font-size: 20px;
+          color: #396ff4; }
+        .login-partial .login-page .login-container .login-content .input-field {
+          width: 100%;
+          margin: 6px 0; }
+          .login-partial .login-page .login-container .login-content .input-field .input:focus {
+            border: 1px solid #1492e6 !important; }
+          .login-partial .login-page .login-container .login-content .input-field .user-password {
+            display: flex; }
+            .login-partial .login-page .login-container .login-content .input-field .user-password .text-password {
+              position: relative; }
+            .login-partial .login-page .login-container .login-content .input-field .user-password .child-password {
+              position: absolute;
+              right: 80px;
+              margin: 12px 0 0 0;
+              color: #ccc;
+              margin-top: 13px; }
+              .login-partial .login-page .login-container .login-content .input-field .user-password .child-password:hover {
+                color: #1492e6;
+                cursor: pointer; }
+          .login-partial .login-page .login-container .login-content .input-field .text-box input {
+            border-radius: 22.5px;
+            padding: 0 28px;
+            height: 48px;
+            width: 100%;
+            border: solid 1px #ccc; }
+            .login-partial .login-page .login-container .login-content .input-field .text-box input:focus {
+              border: 1px solid #1492e6 !important; }
+            .login-partial .login-page .login-container .login-content .input-field .text-box input:active {
+              border: 1px solid #1492e6 !important; }
+        .login-partial .login-page .login-container .login-content .button-login {
+          width: 100%;
+          padding: 20px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .login-partial .login-page .login-container .login-content .button-login .btn-Accept {
+            width: 100%; }
+            .login-partial .login-page .login-container .login-content .button-login .btn-Accept .btn-login {
+              border-radius: 22.5px;
+              width: 100%;
+              height: 46px;
+              font-size: 15px !important;
+              font-weight: bold;
+              letter-spacing: .3px;
+              border: none;
+              color: #fff;
+              background-image: linear-gradient(185.95deg, #39bff4 0%, #6068ee 100%); }
+              .login-partial .login-page .login-container .login-content .button-login .btn-Accept .btn-login a {
+                color: #fff;
+                text-decoration: none; }
+              .login-partial .login-page .login-container .login-content .button-login .btn-Accept .btn-login:hover, .login-partial .login-page .login-container .login-content .button-login .btn-Accept .btn-login:focus, .login-partial .login-page .login-container .login-content .button-login .btn-Accept .btn-login:active {
+                background-image: linear-gradient(0.95deg, #396ff4 0%, #6068ee 100%); }
+          .login-partial .login-page .login-container .login-content .button-login .bottom-login {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 18px;
+            margin-top: 8px; }
+            .login-partial .login-page .login-container .login-content .button-login .bottom-login a {
+              text-decoration: none;
+              font-size: 14px;
+              color: #1492e6; }
+            .login-partial .login-page .login-container .login-content .button-login .bottom-login .login-lefts a {
+              border: none !important; }
+              .login-partial .login-page .login-container .login-content .button-login .bottom-login .login-lefts a:hover {
+                background-color: #fff !important; }
+            .login-partial .login-page .login-container .login-content .button-login .bottom-login login-rights a {
+              border: none !important; }
+              .login-partial .login-page .login-container .login-content .button-login .bottom-login login-rights a:hover {
+                background-color: #fff !important; }
+
+.text-box > input:focus {
+  border: 3px solid #1492e6 !important;
+  outline-style: none; }
+
+#dialog-form {
+  width: 500px;
+  height: 500px; }
+
+.box_gt {
+  display: flex;
+  border: none !important; }
+  .box_gt .gt {
+    display: flex;
+    align-items: center; }
+    .box_gt .gt:first-child {
+      margin-right: 10px; }
+    .box_gt .gt input {
+      width: auto !important; }
+
+.box_right {
+  width: 40px; }
+  .box_right #ngaysinh {
+    width: 40px; }

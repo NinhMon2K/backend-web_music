@@ -1,0 +1,28 @@
+﻿@import "../common/_color.scss";
+
+.page-menu {
+    .menu-group {
+        .menu-item {
+            display: flex;
+            height: 44px;
+            align-items: center;
+            cursor: pointer;
+            color: #fff !important;
+            text-decoration: unset;
+
+            .text-menu {
+                flex: 1;
+            }
+
+            .menu-icon {
+                margin: 0 12px;
+            }
+
+            &.selected {
+                background-color: #273557;
+                border-left: 5px solid $app;
+                transition: ease-in-out 0.3s;
+            }
+        }
+    }
+}

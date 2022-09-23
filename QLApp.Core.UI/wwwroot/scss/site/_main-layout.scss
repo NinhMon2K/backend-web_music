@@ -1,0 +1,74 @@
+﻿@import "../control/font.scss";
+@import "../control/dialog.scss";
+
+
+body {
+    font-family: roboto-regular;
+    font: roboto-regular;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.main-layout {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .layout-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+
+        .left-layout {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            background-color: #011239;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .right-layout {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .layout-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+
+.flex-column-fill {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.page-title {
+    align-items: center;
+}
+
+.input-field {
+    margin-top: 0px;
+}

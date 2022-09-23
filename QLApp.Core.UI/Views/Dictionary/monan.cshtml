@@ -1,0 +1,212 @@
+﻿@using QLApp.Core.Entities
+@using QLApp.Core.Entities.Constant
+@using QLApp.UILibrary.Helper
+
+@{
+    Layout = "_Layout";
+
+}
+
+<link href="~/css/view/dictionary/monan.css" rel="stylesheet" />
+
+<div class="top-content" id="tbMoman">
+    <div class="header__search__bar bl">
+        <div class="header__search__bar__icon">
+            <i class="ti-filter"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Điều kiện lọc">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="header__search__bar search">
+        <div class="header__search__bar__icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__search__bar__input search">
+            <input id="txt_search" type="text" placeholder="Tìm kiếm">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="container-button">
+        <div class="btn-left">
+            <button class="btn btn_delete" disabled>Delete</button>
+        </div>
+        <div class="btn-right">
+            <button class="btn btn_add" id="btn_add">Add</button>
+        </div>
+    </div>
+</div>
+<div class="container-table">
+    <table id="table_id"
+           class="display"
+           data-url="@Url.AppAction(MicroService.Core,"LoadALLMonAn","Dictionary")"
+           data-toolbar="#tbMoman"
+           data-search-selector="#txt_search"
+           data-pagination="true"
+           data-scrollTo="true"
+           data-page-size="2"
+           data-load-dictionary="true"
+           data-side-pagination="server">
+        <thead>
+            <tr data-field="id" data-id="id">
+                <th class="text-center ck_All"
+                    data-checkbox="true"
+                    data-searchable="false"
+                    data-field="">
+                </th>
+                <th class="stt"
+                    data-searchable="false"
+                    data-field="stt">STT </th>
+                <th class="img-ma"
+                    data-field="anh"
+                    data-searchable="false"
+                    data-formatter="monanr.onFormatIng">Hình ảnh</th>
+                <th class="name-ma"
+                    data-field="tenmonan">Tên món ăn</th>
+                <th class="loai-ma"
+                    data-field="tenloai" data-align="center">Loại món</th>
+                <th class="mota-ma"
+                    data-searchable="false"
+                    data-field="mota" data-width="200">Mô tả</th>
+                <th class="cachlam-ma"
+                    data-field="cachlam">Cách làm</th>
+                <th class="noiban-ma"
+                    data-field="noiban">Nơi bán</th>
+                <th class="video-ma"
+                    data-formatter="monanr.onFormatVideo">Video</th>
+                <th class="btn_sua" data-formatter="monanr.onFormatUpdate" data-align="center"> </th>
+                <th class="btn_xoa" data-formatter="monanr.onFormatDelete">  </th>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+
+
+<div id="dialog-form" title="Món ăn">
+    <form class="form" id="form-1" action="" method="POST">
+
+        <div class="page-content">
+            <div class="page_row page_row-1">
+                <div class="cpn_centent">
+
+                    <div class="cpn_centent_text">
+                        <div class="box box_name">
+                            <div class="box_left">
+                                <label for="name">Tên món ăn</label>
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="text" name="name_ma" id="name_ma" class="text ui-widget-content ui-corner-all form-control">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                      
+                        <div class="box box_cachlam_ma">
+                            <div class="box_left">
+                                <label>Mô tả:</label>
+
+                            </div>
+                            <div class="box_right form-group">
+                                <textarea type="text" name="mota_ma" id="mota_ma" class="text ui-widget-content ui-corner-all "> </textarea>
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-content">
+                        <div class="import-content">
+                            <label for="hinhanh_ma">
+
+                                <div for="hinhanh_ma" class="drag-container">
+
+
+                                    <div class="ic-plus">
+
+                                        <i for="hinhanh_ma" class="ti-plus"></i>
+                                    </div>
+
+                                    <div class="display-text">
+                                        Chọn ảnh
+                                    </div>
+
+                                    <input class="drag-box"
+                                           id="hinhanh_ma"
+                                           type="file"
+                                           title="Chọn ảnh" style="display: none; visibility: none;" />
+                                    <img id="blah" class="img-back" />
+
+                                </div>
+
+                            </label>
+                            <div class="result-upload"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+               
+                <div class="box box_noiban_ma">
+                    <div class="box_left">
+                        <label for="password">Nơi bán:</label>
+
+                    </div>
+                    <div class="box_right form-group">
+                        <input type="text" name="noiban_ma" id="noiban_ma" class="text ui-widget-content ui-corner-all form-control">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="box box_loai_ma">
+                    <div class="box_left">
+
+                        <label for="name">Loại món:</label>
+
+                    </div>
+                    <div class="box_right form-group">
+                        <select id="lt_type_dish_filter" placeholder="Select size..." style="width: 100%;">
+                        </select>
+
+                    </div>
+                </div>
+                <div class="box box_mota">
+                    <div class="box_left">
+
+                        <label for="name">Cách làm:</label>
+
+                    </div>
+                    <div class="box_right form-group">
+                        <textarea type="text" name="cachlam_ma" id="cachlam_ma" class="mota_ma text ui-widget-content ui-corner-all"> </textarea>
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="page-footer">
+            <div class="footer-content" style="display:flex">
+                <div class="left-footer btn_left">
+                    <button type="button" id="btn_close" class="btn">Đóng</button>
+                </div>
+                <div class="right-footer">
+                    <button type="button" class="btn" id="btn_luu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<script src="~/js/view/dictionnary/monan.js"></script>

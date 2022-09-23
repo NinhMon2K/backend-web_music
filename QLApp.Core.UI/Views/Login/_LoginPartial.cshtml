@@ -1,0 +1,221 @@
+﻿@{
+    Layout = null;
+
+}
+
+<link href="~/lib/themify-icons/themify-icons.css" rel="stylesheet" />
+<link href="~/css/view/dictionary/table.css" rel="stylesheet" />
+<form class="page-view login-partial">
+    <link href="~/css/view/login/_LoginPartial.css" rel="stylesheet" />
+    <div class="login-page">
+        <div class="login-container">
+            <div class="login-content">
+                <div class="top-login">
+                    <div class="logo-phone">
+
+                    </div>
+                    <div class="name-phone">Quản lý giới thiệu món ăn</div>
+                </div>
+                <div class="input-field input-margin">
+                    <div class="text-box">
+                        <input type="text" name="name" id="username" placeholder="Tài khoản" value="" />
+                    </div>
+                </div>
+                <div class="input-field input-margin">
+                    <div class="text-box user-password">
+
+
+                        <input type="password" class="text-password" id="password" name="name" placeholder="Mật khẩu" value="" />
+
+                        <div class="child-password">
+                            <i class="ti-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-login">
+
+                    <div class="btn-Accept">
+                        <button type="button" id="btn-login" class="btn btn-login"><a href="#">Đăng nhập</a></button>
+                    </div>
+                    <div class="bottom-login">
+                        <div class="login-lefts"><a class="registration-user" id="registration-user" href="#">Đăng kí</a></div>
+                        <div class="login-rights"><a class="familiar-user" href="#">Quên mật khẩu</a></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</form>
+<div id="dialog-form" title="Đăng ký">
+
+    <form class="form" id="form-1" action="" data-auto-screen="true" method="POST">
+
+        <div class="page-content">
+            <div class="page_row page_row-1">
+                <div class="box box_taikhoan">
+                    <div class="box_left">
+                        <label for="name">Tên tài khoản:</label>
+                    </div>
+                    <div class="box_right form-group">
+                        <input type="text" name="taikhoan" id="taikhoan" class="text ui-widget-content ui-corner-all form-control">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="box_left">
+                        <label for="email">Mật khẩu:</label>
+
+                    </div>
+                    <div class="box_right form-group">
+                        <input type="password" name="password_tk" id="password_tk" class="text ui-widget-content ui-corner-all form-control">
+                        <div class="child-password">
+                            <i class="ti-eye"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+               
+            </div>
+
+
+            <div class="page_row page_row-2" data-step="2" style="display:none;">
+                <div class="cpn_centent">
+
+                    <div class="cpn_centent_text">
+                        <div class="box box_ht">
+                            <div class="box_left">
+                                <label for="password">Họ tên:</label>
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="text" name="fullname" id="fullname" class="text ui-widget-content ui-corner-all">
+                            </div>
+                        </div>
+
+                        <div class="box box_ht">
+                            <div class="box_left">
+                                <label for="password">Giới tính:</label>
+
+                            </div>
+                            <div class="box_right box_gt ">
+                                <div class="gt gt_nam">
+                                    <input type="radio" id="rdonam" name="sex" value="1">
+                                    <label>Nam</label>
+                                </div>
+                                <div class="gt gt_nu">
+                                    <input type="radio" id="rdonu" name="sex" value="0">
+                                    <label>Nữ</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="box box_sdt">
+                            <div class="box_left">
+
+                                <label for="name">Số điện thoại:</label>
+
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="text" name="" id="sdt" class="text ui-widget-content ui-corner-all">
+                            </div>
+                        </div>
+
+                        <div class="box box_ht ">
+                            <div class="box_left">
+                                <label>Ngày sinh:</label>
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="date"
+                                       id="ngaysinh"
+                                       name="date"
+                                       data-field="ngaysinh"
+                                       data-has-data="true"
+                                       data-control-type="Date"
+                                       data-type="Date"
+                                       placeholder="__/__/____">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="box box_email">
+                            <div class="box_left">
+
+                                <label for="name">Email:</label>
+
+                            </div>
+                            <div class="box_right  form-group">
+                                <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="right-content">
+                        <div class="import-content">
+                            <label for="hinhanh_tk">
+
+                                <div for="hinhanh_tk" class="drag-container">
+
+
+                                    <div class="ic-plus">
+
+                                        <i for="hinhanh_tk" class="ti-plus"></i>
+                                    </div>
+
+                                    <div class="display-text">
+                                        Chọn ảnh
+                                    </div>
+
+                                    <input class="drag-box"
+                                           id="hinhanh_tk"
+                                           type="file"
+                                           title="Chọn ảnh" style="display: none; visibility: none;" />
+                                    <img id="blah" class="img-back" />
+
+                                </div>
+
+                            </label>
+                            <div class="result-upload"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="page-footer">
+
+
+            <div class="footer-content" style="display:flex">
+                <div class="left-footer btn_left">
+                    <button type="button" id="btn_close" class="btn">Đóng</button>
+                    <button type="button" id="btn_trove" style="display: none;" class="btn">Trở về</button>
+                </div>
+                <div class="right-footer">
+                    <button type="button" class="btn" id="btn_tieptheo">Tiếp theo</button>
+                    <button type="button" class="btn" style="display: none;" id="btn_luu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script src="~/js/view/login/_LoginPartial.js"></script>

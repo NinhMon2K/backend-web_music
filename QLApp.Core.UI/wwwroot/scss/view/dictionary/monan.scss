@@ -1,0 +1,43 @@
+﻿table {
+    tr {
+        .name-ma {
+            width: 96px;
+        }
+
+        .loai-ma {
+            width: 65px;
+        }
+
+        .mota-ma {
+            width: 460px;
+        }
+
+        .img-ma {
+            width: 136px;
+        }
+
+        .video-ma {
+            width: 55px;
+        }
+    }
+}
+
+.page_row {
+    .box_cachlam_ma {
+        height: 150px !important;
+    }
+
+    .box_mota {
+        height: 300px !important;
+
+        .box_right {
+            .mota_ma {
+                height: 500px !important;
+            }
+
+            input {
+                height: 50px;
+            }
+        }
+    }
+}

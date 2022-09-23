@@ -1,0 +1,256 @@
+﻿@using QLApp.Core.Entities
+@using QLApp.Core.Entities.Constant
+@using QLApp.UILibrary.Helper
+
+
+@{
+    var a = AuthService.GetCurrentUser()?.tentaikhoan;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Phần mềm giới thiệu món ăn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+    <link href="~/lib/themify-icons/themify-icons.css" rel="stylesheet" />
+
+    <link href="~/lib/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+</head>
+<body>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+    <script src="~/js/util.js"></script>
+    <script src="~/js/ajax.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link href="~/css/control/toastr.css" rel="stylesheet" />
+    <script src="~/js/common/toastr.js"></script>
+    <link href="~/css/view/dictionary/SideBarLayout.css" rel="stylesheet" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <link href="~/css/view/dictionary/SideBarLayout.css" rel="stylesheet" />
+    <link href="~/css/view/dictionary/table.css" rel="stylesheet" />
+    <script src="~/js/common/validator.js"></script>`
+    <link href="~/css/common/bootstrap-table.css" rel="stylesheet" />
+    <link href="~/css/common/bootstrap-table.min.css" rel="stylesheet" />
+    <script src="~/js/common/bootstrap-table.js"></script>
+    <script src="~/js/common/bootstrap-table-vi-VN.js"></script>
+    <script src="~/js/common/Chart.bundle.js"></script>
+    <script src="~/js/common/Chart.bundle.min.js"></script>
+    <link href="~/js/common/Chart.css" rel="stylesheet" />
+    <script src="~/js/common/Chart.js"></script>
+    <link href="~/js/common/Chart.min.css" rel="stylesheet" />
+    <script src="~/js/common/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <script src="~/js/common/bs-override.js"></script>
+
+    <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.20.2/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
+
+
+
+
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bx-grid-alt'></i>
+
+            <span class="logo_name">QLGT món ăn</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link item_TQ">
+                    <a href="@Url.AppAction(MicroService.UI, "Home","Dictionary")">
+                        <i class='ti-home'></i>
+                        <span class="link_name">Tổng quan</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="@Url.AppAction(MicroService.UI, "Home","Dictionary")">Tổng quan</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link item_QLMA">
+                    <a href="#">
+                        <i class='ti-clipboard'></i>
+                        <span class="link_name">QL món ăn</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Quản lý món ăn</a></li>
+
+                    <li>
+                        <div class="iocn-link">
+                            <a href="@Url.AppAction(MicroService.UI, "monan","Dictionary")">Món ăn</a>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="iocn-link">
+                            <a href="@Url.AppAction(MicroService.UI, "loaimonan","Dictionary")">Loại món ăn</a>
+                            </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link item_ND">
+                    <a href="@Url.AppAction(MicroService.UI, "nguoidung","Dictionary")">
+                        <i class='far fa-user-circle'></i>
+                        <span class="link_name">Thông tin nguời dùng</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="@Url.AppAction(MicroService.UI, "nguoidung","Dictionary")">Thông tin nguời dùng</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link item_TK">
+                    <a href="@Url.AppAction(MicroService.UI, "taikhoan","Dictionary")">
+                        <i class='ti-user'></i>
+                        <span class="link_name">Tài khoản</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="@Url.AppAction(MicroService.UI, "taikhoan","Dictionary")">Tài khoản</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link item_BL">
+                    <a href="/Dictionary/baoloi?status=2">
+                        <i class='ti-alert'></i>
+                        <span class="link_name">Báo lỗi</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/Dictionary/baoloi?status=2">Báo lỗi</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link item_CH">
+                    <a href="@Url.AppAction(MicroService.UI, "cauhoi","Dictionary")">
+                        <i class='ti-comment-alt'></i>
+                        <span class="link_name">Câu hỏi</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="@Url.AppAction(MicroService.UI, "cauhoi","Dictionary")">Câu hỏi</a></li>
+                </ul>
+            </li>
+            @*<li>
+                    <a href="#">
+                        <i class='ti-help-alt'></i>
+                        <span class="link_name">Trợ giúp</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Trợ giúp</a></li>
+                    </ul>
+                </li>*@
+            @*<li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i>
+                        <span class="link_name">Setting</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Setting</a></li>
+                    </ul>
+                </li>*@
+            <!--<li>
+            <div class="profile-details">
+                <div class="profile-content">-->
+            <!--<img src="image/profile.jpg" alt="profileImg">-->
+            <!--<img src="image/profile.jpg" alt="profileImg">-->
+            <!--<img src="image/profile.jpg" alt="profileImg">-->
+            <!--</div>
+                    <div class="name-job">
+                        <div class="profile_name">Đăng xuất</div>
+
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+
+
+    <script>
+
+        var a = {
+            a: "@AuthService.GetCurrentUser()?.tentaikhoan"
+        }
+
+    </script>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu' title="Menu"></i>
+            <div class="right-header">
+                <div class="top-item header-setting">
+                    <button class="btn_setting">   <a href="#"><i class="ti-settings" title="Cài đặt"></i></a> </button>
+                </div>
+                <div class="top-item header-help">
+                    <button class="btn_trogiup"> <a href="#"><i class="ti-info-alt" title="Trợ giúp"></i></a> </button>
+                </div>
+                <div class="top-item header-notification">
+                    <button class="btn_thongbao"> <a href="/Dictionary/baoloi?status=0"><i class="ti-bell" title="Thông báo"></i></a>  </button>
+                    <div class="bell_item">
+                        <p>24</p>
+                    </div>
+                </div>
+                <div class="sepetator"></div>
+                <div class="top-item header-user">
+
+                    <div class="user user-name">Nguyễn Nghĩa Ninh</div>
+                    <div class="user user-icon"><img class="img_userinfo" /></div>
+                    <div class="user user-icon-dropdow"><i class="ti-arrow-circle-down"></i></div>
+                    <div class="user-info">
+                        <div class="top-user-info">
+                            <div class="left-info"><img class="img_userinfo" /></i></div>
+                            <div class="right-info">
+                                <div class="name-info">@AuthService.GetCurrentUser()?.tentaikhoan</div>
+                                <div class="information-user"><a href="#">Thông tin tài khoản</a></div>
+                            </div>
+                        </div>
+                        <div class="title-user">Chức vụ</div>
+                        <div class="information-title-user">
+                            <div class="icon-information"><i class="ti-user"></i></div>
+                            <div class="name-information">Admin</div>
+                        </div>
+                        <div class="logout-content">
+                            <button id="btnLogout"><a href="/">Đăng xuất</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-content">
+            @RenderBody()
+        </div>
+
+
+    </section>
+    <script src="~/js/Shared/SideBarLayout.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

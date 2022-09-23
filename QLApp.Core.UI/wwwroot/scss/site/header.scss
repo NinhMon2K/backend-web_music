@@ -1,0 +1,401 @@
+﻿@import "../common/_color.scss";
+
+.header-layout {
+    height: 56px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-header {
+    display: flex;
+    align-items: center
+}
+
+.right-header .tool-header {
+    z-index: 1;
+    display: flex;
+    height: 55px
+}
+
+.right-header .tool-header -icon {
+    width: 44px;
+    height: calc(100% - 1px);
+    border: 0;
+    outline: 0;
+    position: relative;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center
+}
+
+.right-header .tool-header -icon .notification-number {
+    color: #fff;
+    background: #1492e6;
+    position: absolute;
+    top: 13px;
+    left: 23px;
+    border-radius: 50%;
+    padding: 0 3px;
+    min-width: 14px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 1px solid #1492e6
+}
+
+.right-header .tool-header -icon .button-content {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.right-header .tool-header -icon .button-content .ic-notification {
+    transition: .15s
+}
+
+.right-header .tool-header -icon:hover, header .right-header .tool-header -icon:focus {
+    background-color: #1492e6
+}
+
+.right-header .tool-header -icon:hover.search, header .right-header .tool-header -icon:focus.search {
+    background-position: -341px -206px
+}
+
+.right-header .tool-header -icon:hover.setting, header .right-header .tool-header -icon:focus.setting {
+    background-position: -341px -250px
+}
+
+.right-header .tool-header -icon:hover.help, header .right-header .tool-header -icon:focus.help {
+    background-position: -341px -294px
+}
+
+.right-header .tool-header -icon:hover.notification, header .right-header .tool-header -icon:focus.notification {
+    background-position: -341px -337px
+}
+
+.right-header .tool-header -icon:hover.notification .notification-number, header .right-header .tool-header -icon:focus.notification .notification-number {
+    color: #1492e6;
+    background: #f5f5f5
+}
+
+.right-header .tool-header .setting-container {
+    position: fixed !important;
+    top: 56px !important;
+    right: 2px !important;
+    left: unset !important;
+    bottom: unset !important;
+    transform: inherit !important;
+    width: 380px;
+    transition: ease-in-out .2s;
+    min-height: 52px;
+    max-height: 298px;
+    overflow: auto;
+    border-radius: 0;
+    border: none;
+    border-top: 5px solid #1492e6;
+    z-index: 100000000;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,.16);
+    font-size: 13px !important
+}
+
+.right-header .user-header {
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    align-items: center;
+    align-self: center;
+    margin: 0 15px;
+    font-size: 13px
+}
+
+.right-header .user-header .sepetator {
+    border-right: 1px solid #e0e0e0;
+    height: 22px
+}
+
+.right-header .user-header .username {
+    color: #454f63;
+    font-size: 14px;
+    margin: 0 14px;
+    cursor: pointer;
+    text-transform: capitalize
+}
+
+.right-header .user-header .avatar {
+    background: url("../../images/default-avatar.png") center no-repeat;
+    border: 1px solid #e0e0e0;
+    margin-right: 14px;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    background-size: 30px;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.right-header .user-header .dropdown-menu {
+    padding: 0;
+    border: 0;
+    left: unset !important;
+    will-change: unset !important;
+    transform: unset !important;
+    width: unset !important
+}
+
+.right-header .user-header .dropdown-menu .popover {
+    padding: 8px 0;
+    top: 50px !important;
+    left: -321px !important;
+    border: 0;
+    max-width: unset !important;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.16);
+    padding: 0 !important;
+    overflow: hidden
+}
+
+.right-header .user-header .dropdown-menu .popover .dropdown-item {
+    color: #38393d;
+    padding: 6px 20px;
+    font-family: Roboto-Regular;
+    font-size: 13px
+}
+
+.right-header .user-header .dropdown-menu .popover .dropdown-item:active {
+    color: #fff;
+    background-color: #1492e6
+}
+
+.right-header .user-header .dropdown-menu .popover .dropdown-divider {
+    margin: 0 20px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item {
+    z-index: 1;
+    position: relative;
+    background-color: #fff;
+    padding: 8px 0;
+    width: 325px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    max-height: 420px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info {
+    padding: 12px 8px;
+    background-color: #f5f5f5
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link {
+    text-decoration: unset !important
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link .user-group-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link .user-group-img .avatar {
+    margin-right: 0 !important;
+    width: 40px !important;
+    height: 40px !important
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link .user-group-content .user-name {
+    font-size: 16px;
+    color: #000
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link .user-group-content .user-info-link {
+    font-size: 12px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .user-info .user-link .user-group-content .user-info-link:hover {
+    text-decoration: underline
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-title {
+    padding: 8px 20px;
+    font-size: 16px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group {
+    overflow: auto;
+    flex: 1
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item {
+    text-decoration: unset;
+    color: #38393d
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item .organization-item {
+    display: flex
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item .organization-item .misa-icon {
+    min-width: 32px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item .organization-item .organization-icon {
+    min-width: 40px;
+    display: flex;
+    align-items: center
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item .organization-item .organization-name {
+    align-items: center;
+    display: flex
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item:hover {
+    background-color: #e3f2ff !important
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item.selected .misa-icon {
+    background-position: -6px -426px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item.selected .organization-name {
+    font-weight: bold
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item-child.selected {
+    background-color: #0ff !important
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .organization-info .organization-group .list-group-item:first-child {
+    border-top: none
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .logout-content {
+    padding: 16px 20px 8px 20px
+}
+
+.right-header .user-header .dropdown-menu .popover-gr-item .use-agree {
+    padding: 6px 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px
+}
+
+.right-header .user-header .dropdown-menu .arrow-up {
+    height: 18px;
+    width: 18px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 6px rgba(0,0,0,.16);
+    position: absolute;
+    top: -8px;
+    right: 32px;
+    z-index: 0;
+    background-color: #fff
+}
+
+.right-header .user-header .more {
+    color: #454f63;
+    cursor: pointer;
+    content: "";
+    border-top: 4.5px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent
+}
+
+.right-header .tool-header .header-icon {
+    width: 44px;
+    height: calc(100% - 1px);
+    border: 0;
+    outline: 0;
+    position: relative;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center
+}
+
+.right-header .tool-header .header-icon .notification-number {
+    color: #fff;
+    background: #1492e6;
+    position: absolute;
+    top: 13px;
+    left: 23px;
+    border-radius: 50%;
+    padding: 0 3px;
+    min-width: 14px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 1px solid #1492e6
+}
+
+.right-header .tool-header .header-icon .button-content {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.right-header .tool-header .header-icon .button-content .ic-notification {
+    transition: .15s
+}
+
+.right-header .tool-header .header-icon:hover, header .right-header .tool-header .header-icon:focus {
+    background-color: #1492e6
+}
+
+.right-header .tool-header .header-icon:hover.search, header .right-header .tool-header .header-icon:focus.search {
+    background-position: -341px -206px
+}
+
+.right-header .tool-header .header-icon:hover.setting, header .right-header .tool-header .header-icon:focus.setting {
+    background-position: -341px -250px
+}
+
+.right-header .tool-header .header-icon:hover.help, header .right-header .tool-header .header-icon:focus.help {
+    background-position: -341px -294px
+}
+
+.right-header .tool-header .header-icon:hover.notification, header .right-header .tool-header .header-icon:focus.notification {
+    background-position: -341px -337px
+}
+
+.right-header .tool-header .header-icon:hover.notification .notification-number, header .right-header .tool-header .header-icon:focus.notification .notification-number {
+    color: #1492e6;
+    background: #f5f5f5
+}
+
+.left-header {
+    display: flex;
+    align-items: center
+}
+
+.left-header .organization-name {
+    white-space: nowrap;
+    color: #454f63;
+    margin-left: 30px;
+    font-size: 15px;
+    font-family: Roboto-Medium;
+    display: block;
+    text-overflow: ellipsis;
+    text-transform: uppercase
+}

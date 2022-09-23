@@ -1,0 +1,34 @@
+﻿.container-content {
+    .top-content {
+    }
+}
+
+
+
+
+
+
+.header__search__bar__modal {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 30;
+    animation: modal-show-up ease 0.3s;
+}
+
+
+.name-kh {
+    flex: 1;
+}
+
+.sdt-kh {
+    width: 240px;
+}
+
+.email-kh {
+    width: 380px;
+}

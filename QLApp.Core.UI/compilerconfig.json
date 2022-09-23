@@ -1,0 +1,58 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/view/dictionary/_Layout.css",
+    "inputFile": "wwwroot/scss/view/dictionary/_Layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/admin.css",
+    "inputFile": "wwwroot/scss/view/dictionary/admin.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/table.css",
+    "inputFile": "wwwroot/scss/view/dictionary/table.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/khachhang.css",
+    "inputFile": "wwwroot/scss/view/dictionary/khachhang.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/dilog.css",
+    "inputFile": "wwwroot/scss/view/dictionary/dilog.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/login/_LoginPartial.css",
+    "inputFile": "wwwroot/scss/view/login/_LoginPartial.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/control/toastr.css",
+    "inputFile": "wwwroot/scss/control/toastr.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/monan.css",
+    "inputFile": "wwwroot/scss/view/dictionary/monan.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/taikhoan.css",
+    "inputFile": "wwwroot/scss/view/dictionary/taikhoan.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/nguoidung.css",
+    "inputFile": "wwwroot/scss/view/dictionary/nguoidung.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/cauhoi.css",
+    "inputFile": "wwwroot/scss/view/dictionary/cauhoi.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/baoloi.css",
+    "inputFile": "wwwroot/scss/view/dictionary/baoloi.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/Home.css",
+    "inputFile": "wwwroot/scss/view/dictionary/Home.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/view/dictionary/loaimonan.css",
+    "inputFile": "wwwroot/scss/view/dictionary/loaimonan.scss"
+  }
+]

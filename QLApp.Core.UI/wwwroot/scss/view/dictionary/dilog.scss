@@ -1,0 +1,30 @@
+﻿.page-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    flex: 1;
+
+
+    .page-row {
+        display: flex;
+        width: 100%;
+        height: auto;
+
+        .input-field {
+            display: flex;
+            width: 100%;
+
+            .input-label {
+                min-width: 114px;
+            }
+
+            .text-box{
+                flex:1;
+                input{
+                    width:100%;
+                }
+            }
+        }
+    }
+}

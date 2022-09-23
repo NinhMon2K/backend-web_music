@@ -1,0 +1,111 @@
+﻿@using QLApp.Core.Entities
+@using QLApp.Core.Entities.Constant
+@using QLApp.UILibrary.Helper
+@{
+    Layout = "_Layout";
+}
+<link href="~/css/view/dictionary/baoloi.css" rel="stylesheet" />
+
+<div class="menu-group" >
+    <a id="0" class="item-navbar item-navbar_3" href="/Dictionary/baoloi?status=2">
+        <div class="navbar-left">
+            <div class="total total_tong">38</div>
+            <div class="name-total">Tổng</div>
+        </div><div class="navbar-right">
+            <div class="icon-navbar"><i class="ti-home"></i></div>
+        </div>
+    </a>
+    <a id="1" class="item-navbar item-navbar_2" href="/Dictionary/baoloi?status=0">
+        <div class="navbar-left">
+            <div class="total total_chuaxuly">38</div>
+            <div class="name-total">Chưa xử lý</div>
+        </div><div class="navbar-right">
+            <div class="icon-navbar"><i class="ti-alert"></i></div>
+        </div>
+    </a>
+    <a id="2" class="item-navbar item-navbar_0" href="/Dictionary/baoloi?status=1">
+        <div class="navbar-left">
+            <div class="total total_daxuly">38</div>
+            <div class="name-total">Đã xử lý</div>
+        </div><div class="navbar-right">
+            <div class="icon-navbar"><i class="ti-check"></i></div>
+        </div>
+    </a>
+
+</div>
+<div class="top-content" id="tbBaoLoi">
+    <div class="header__search__bar bl">
+        <div class="header__search__bar__icon">
+            <i class="ti-filter"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Điều kiện lọc">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="header__search__bar search">
+        <div class="header__search__bar__icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__search__bar__input search">
+            <input type="text" placeholder="Tìm kiếm" id="txt_search">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="container-button">
+        <div class="btn-left">
+            <button class="btn btn_delete" disabled>Delete</button>
+        </div>
+        <div class="btn-right">
+            <button class="btn btn_check" id="btn_check">Duyệt</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-table">
+    <table id="table_id"
+           class="display"
+           data-url="@Url.AppAction(MicroService.Core,"GetReportStatus","Dictionary")"
+           data-params="bl.getParam"
+           data-toolbar="#tbBaoLoi"
+           data-search-selector="#txt_search"
+           data-pagination="true"
+           data-scrollTo="true"
+           data-load-dictionary="true"
+           data-side-pagination="server">
+        <thead>
+            <tr data-field="id" data-id="id">
+                <th class="text-center ck_All"
+                    data-checkbox="true"
+                    data-searchable="false"
+                    data-field="">
+                </th>
+                <th class="baoloi"
+                    data-field="imgRP" data-formatter="bl.onFormatIng" data-searchable="false">Ảnh</th>
+                <th class="baoloi"
+                    data-field="titleRP">Tên lỗi</th>
+                <th class="baoloi"
+                    data-field="descRP">Mô tả</th>
+
+                <th class="baoloi"
+                    data-field="timeRP" data-searchable="false">Thời gian</th>
+                <th class="baoloi" data-width="200" data-align="center"
+                    data-field="fixRP" data-formatter="bl.onFormatStatus" data-searchable="false">Trạng thái</th>
+                <th class="btn_xoa" data-formatter="bl.onFormatDelete" data-searchable="false">  </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+
+<script src="~/js/view/dictionnary/baoloi.js"></script>

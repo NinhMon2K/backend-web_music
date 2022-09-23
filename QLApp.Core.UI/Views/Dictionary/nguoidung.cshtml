@@ -1,0 +1,206 @@
+﻿@using QLApp.Core.Entities
+@using QLApp.Core.Entities.Constant
+@using QLApp.UILibrary.Helper
+
+@{
+    Layout = "_Layout";
+}
+<link href="~/css/view/dictionary/nguoidung.css" rel="stylesheet" />
+<div class="top-content" id="tbNguoiDung">
+    <div class="header__search__bar bl">
+        <div class="header__search__bar__icon">
+            <i class="ti-filter"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Điều kiện lọc">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="header__search__bar search">
+        <div class="header__search__bar__icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__search__bar__input search">
+            <input type="text" id="txt_search" placeholder="Tìm kiếm">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="container-button">
+        <div class="btn-left">
+            <button class="btn btn_delete" disabled>Delete</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-table">
+    <table id="table_id"
+           class="display"
+           data-url="@Url.AppAction(MicroService.Core,"LoadNguoiDung","Dictionary")"
+           data-toolbar="#tbNguoiDung"
+           data-pagination="true"
+           data-search-selector="#txt_search"
+           data-scrollTo="true"
+           data-load-dictionary="true"
+           data-side-pagination="server">
+        <thead>
+            <tr data-field="id" data-id="id">
+                <th class="text-center ck_All"
+                    data-checkbox="true"
+                    data-searchable="false"
+                    data-field="">
+                </th>
+                <th class="stt"
+                    data-searchable="false"
+                    data-field="stt">STT </th>
+                <th class="img-nd"
+                    data-field="anhdaidien"
+                    data-searchable="false"
+                    data-formatter="nd.onFormatIng">Hình ảnh</th>
+                <th class="fullname-nd"
+                    data-field="tendaydu">Họ và tên</th>
+                <th class="ngaysinh-nd"
+                    data-field="ngaysinh" data-formatter="nd.onFormatDate" data-align="center">Ngày sinh</th>
+                <th class="email-nd"
+                    data-field="email" data-align="right">Email</th>
+                <th class="gioitinh-nd"
+                    data-field="gioitinh"
+                    data-formatter="nd.onFormatGT" data-align="center">Giới tính</th>
+                <th class="sdt-nd"
+                    data-field="sdt" data-align="right">Số điện thoại</th>
+                <th class="btn_sua" data-formatter="nd.onFormatUpdate" data-align="center"> </th>
+                <th class="btn_xoa" data-formatter="nd.onFormatDelete">  </th>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+
+<div id="dialog-form" title="Người dùng">
+    <form class="form" id="form-1" action="" method="POST">
+
+        <div class="page-content">
+            <div class="page_row page_row-1">
+
+                <div class="cpn_centent">
+
+                    <div class="cpn_centent_text">
+                        <div class="box box_name">
+                            <div class="box_left">
+                                <label for="name">Họ và tên:</label>
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="text" name="fullname_nd" id="fullname_nd" class="text ui-widget-content ui-corner-all form-control">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="box box_ht">
+                            <div class="box_left">
+                                <label>Ngày sinh:</label>
+                            </div>
+                            <div class="box_right">
+                                <input type="date" id="ngaysinh" name="date">
+                            </div>
+                        </div>
+                        <div class="box box_sdt">
+                            <div class="box_left">
+                                <label for="name">Số điện thoại:</label>
+                            </div>
+                            <div class="box_right form-group">
+                                <input type="text" name="sdt" id="sdt" class="text ui-widget-content ui-corner-all form-control">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="box box_ht">
+                            <div class="box_left">
+                                <label for="password">Giới tính:</label>
+
+                            </div>
+                            <div class="box_right box_gt">
+                                <div class="gt gt_nam">
+                                    <input type="radio" id="rdonam" name="sex" value="1">
+                                    <label>Nam</label>
+                                </div>
+                                <div class="gt gt_nu">
+                                    <input type="radio" id="rdonu" name="sex" value="0">
+                                    <label>Nữ</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="right-content">
+                        <div class="import-content">
+                            <label for="hinhanh_nd">
+
+                                <div for="hinhanh_nd" class="drag-container">
+
+
+                                    <div class="ic-plus">
+
+                                        <i for="hinhanh_nd" class="ti-plus"></i>
+                                    </div>
+
+                                    <div class="display-text">
+                                        Chọn ảnh
+                                    </div>
+
+                                    <input class="drag-box"
+                                           id="hinhanh_nd"
+                                           type="file"
+                                           title="Chọn ảnh" style="display: none; visibility: none;" />
+                                    <img id="blah" class="img-back" />
+
+                                </div>
+
+                            </label>
+                            <div class="result-upload"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                
+                <div class="box box_email">
+                    <div class="box_left">
+                        <label for="password">Email:</label>
+
+                    </div>
+                    <div class="box_right form-group">
+                        <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all form-control">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="page-footer">
+            <div class="footer-content" style="display:flex">
+                <div class="left-footer btn_left">
+                    <button type="button" id="btn_close" class="btn">Đóng</button>
+                </div>
+                <div class="right-footer">
+                    <button type="button" class="btn" id="btn_luu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="~/js/view/dictionnary/nguoidung.js"></script>

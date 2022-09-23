@@ -1,0 +1,58 @@
+﻿.grid-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.bootstrap-table {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .fixed-table-toolbar {
+        padding: 0 20px;
+
+        .button-group {
+            button:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .fixed-table-container {
+
+        table {
+
+            tr {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #e3f2ff;
+                }
+
+                th, td {
+
+                    &.expend-col {
+                        width: unset;
+                    }
+                }
+
+                th {
+                    text-align: center;
+
+                    .th-inner {
+                    }
+                }
+
+                td {
+                }
+            }
+        }
+
+        .fixed-table-footer {
+            height: unset;
+        }
+    }
+}

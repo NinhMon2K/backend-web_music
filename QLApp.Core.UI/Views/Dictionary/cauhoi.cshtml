@@ -1,0 +1,122 @@
+﻿@using QLApp.Core.Entities
+@using QLApp.Core.Entities.Constant
+@using QLApp.UILibrary.Helper
+@{
+    Layout = "_Layout";
+}
+<link href="~/css/view/dictionary/cauhoi.css" rel="stylesheet" />
+<div class="top-content" id="tbCauHoi">
+    <div class="header__search__bar bl">
+        <div class="header__search__bar__icon">
+            <i class="ti-filter"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Điều kiện lọc">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="header__search__bar search">
+        <div class="header__search__bar__icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__search__bar__input search">
+            <input type="text" placeholder="Tìm kiếm" id="txt_search">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="container-button">
+        <div class="btn-left">
+            <button class="btn btn_delete" disabled>Delete</button>
+        </div>
+       
+    </div>
+</div>
+
+
+<div class="container-table">
+    <table id="table_id"
+           class="display"
+           data-url="@Url.AppAction(MicroService.Core,"LoadQuest","Dictionary")"
+           data-toolbar="#tbCauHoi"
+           data-search-selector="#txt_search"
+           data-pagination="true"
+           data-scrollTo="true"
+           data-load-dictionary="true"
+           data-side-pagination="server">
+        <thead>
+            <tr data-field="id" data-id="id">
+                <th class="text-center ck_All"
+                    data-checkbox="true"
+                    data-searchable="false"
+                    data-field="">
+                </th>
+                <th class="stt"
+                    data-field="stt" data-searchable="false">STT </th>
+                <th class="cauhoi"
+                    data-field="account">Tài khoản</th>
+                <th class="cauhoi"
+                    data-field="quest">Câu hỏi</th>
+                <th class="cauhoi"
+                    data-field="answer">Trả lời</th>
+                <th class="cauhoi"
+                    data-field="timeQ" data-searchable="false">Thời gian</th>
+                <th class="cauhoi" data-width="200" data-align="center"
+                    data-field="checkQ" data-formatter="ch.onFormatStatus">Trạng thái</th>
+                <th class="btn_sua" data-formatter="ch.onFormatUpdate" data-align="center" data-searchable="false"> </th>
+                <th class="btn_xoa" data-formatter="ch.onFormatDelete" data-searchable="false">  </th>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+
+<div id="dialog-form" title="Câu hỏi">
+    <form class="form" id="form-1" action="" method="POST">
+
+        <div class="page-content">
+            <div class="page_row page_row-1">
+                <div class="box box_name">
+                    <div class="box_left">
+                        <label for="name">Câu hỏi:</label>
+                    </div>
+                    <div class="box_right form-group">
+                        <textarea type="text" name="cauhoi" id="cauhoi" class="text ui-widget-content ui-corner-all "> </textarea>
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+
+                <div class="box box_name">
+                    <div class="box_left">
+                        <label for="name">Trả lời:</label>
+                    </div>
+                    <div class="box_right form-group">
+                        <textarea type="text" name="traloi" id="traloi" class="text ui-widget-content ui-corner-all "> </textarea>
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="page-footer">
+            <div class="footer-content" style="display:flex">
+                <div class="left-footer btn_left">
+                    <button type="button" id="btn_close" class="btn">Đóng</button>
+                </div>
+                <div class="right-footer">
+                    <button type="button" class="btn" id="btn_luu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/view/dictionnary/cauhoi.js"></script>

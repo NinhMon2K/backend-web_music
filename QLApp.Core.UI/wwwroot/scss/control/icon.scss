@@ -1,0 +1,110 @@
+﻿
+@mixin setConfig ($width, $height) {
+    width: $width + px;
+    height: $height + px;
+    min-width: $width + px;
+}
+
+@mixin setSquare ($num) {
+    @include setConfig($num, $num);
+}
+
+@mixin commonIcon () {
+    background-image: url('../../images/common.svg');
+}
+
+@mixin commonApp () {
+    background-image: url('../../images/common-report.svg');
+}
+
+.app-icon {
+    &.common {
+        background-image: url('../../images/common.svg');
+        @include setSquare(20);
+    }
+
+    &.multi {
+        @include commonApp();
+        @include setSquare(20);
+        /**************************20px*****************************/
+
+        &.ic-dashboard {
+            background-position: -2px -194px;
+        }
+        /***********************************************************/
+        /*****************************32px**************************/
+
+        &.ic-info-message {
+            background-position: -38px -386px;
+            @include setSquare(32);
+        }
+
+        &.ic-question-message {
+            background-position: -2px -386px;
+            @include setSquare(32);
+        }
+
+        &.ic-order {
+            background-position: -50px -74px;
+        }
+
+        &.ic-dictionary {
+            background-position: -2px -122px;
+        }
+
+        &.ic-report {
+            background-position: -2px -98px;
+        }
+
+        &.ic-user {
+            background-position: -194px -26px;
+        }
+        /***********************************************************/
+    }
+
+    &.large-icon {
+        &.bg-login {
+            background-image: url('../../images/background-login.jpg');
+            background-size: cover;
+        }
+    }
+
+    &.app {
+        background-image: url('../../images/ic-app.svg');
+        background-size: cover;
+
+        &.ic-app-80 {
+            @include setSquare(80);
+        }
+    }
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    background-position: -98px -74px;
+    @include setSquare(20);
+    @include commonIcon();
+}
+
+.base-trigger, .autocomplete-wrapper .base-trigger {
+    @include commonApp();
+    @include setSquare(20);
+    background-position: -21px -116px;
+}
+
+.ui-dialog.detail-modal .ui-dialog-titlebar button.ui-dialog-titlebar-close {
+    background-position: -98px -74px;
+    @include setSquare(20);
+    @include commonIcon();
+}
+
+
+
+
+.page-view .page-title .ic-back {
+    height: 15px;
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-position: -73px -76px;
+    @include commonApp();
+}

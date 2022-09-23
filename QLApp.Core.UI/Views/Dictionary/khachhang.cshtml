@@ -1,0 +1,115 @@
+﻿@{
+
+    Layout = "_LayoutAdmin";
+}
+<link href="~/css/view/dictionary/khachhang.css" rel="stylesheet" />
+<div class="top-content">
+    <div class="header__search__bar bl">
+        <div class="header__search__bar__icon">
+            <i class="ti-filter"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Điều kiện lọc">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="header__search__bar search">
+        <div class="header__search__bar__icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__search__bar__input">
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+
+        <div class="header__search__bar__modal">
+
+        </div>
+
+    </div>
+    <div class="container-button">
+        <div class="btn-left">
+            <button class="btn btn_delete">Delete</button>
+        </div>
+        <div class="btn-right">
+            <button class="btn btn_add" id="btn_add">Add</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-table">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th class="text-center ck_All">
+                    <input type="checkbox" name="name" class="check_item" />
+                </th>
+                <th class="stt">STT </th>
+                <th class="name-kh">Tên khách hàng</th>
+                <th class="sdt-kh">SDT</th>
+                <th class="email-kh">Email</th>
+                <th class="btn_sua"></th>
+                <th class="btn_xoa"></th>
+            </tr>
+        </thead>
+        <tbody class="customer-kh">
+        </tbody>
+    </table>
+</div>
+<div id="dialog-form" title="Đăng kí">
+    <form id="">
+
+        <div class="page-content">
+            <div class="page_row page_row-1">
+                <div class="box box_tk">
+                    <div class="box_left">
+                        <label for="name">Họ tên:</label>
+                    </div>
+                    <div class="box_right">
+                        <input type="text" name="hoten" id="fullname" class="text ui-widget-content ui-corner-all">
+                    </div>
+                </div>
+
+                <div class="box box_mk">
+                    <div class="box_left">
+                        <label for="email">SDT:</label>
+
+                    </div>
+                    <div class="box_right">
+                        <input type="text" name="sdt" id="sdt" class="text ui-widget-content ui-corner-all">
+                    </div>
+                </div>
+                <div class="box box_ht">
+                    <div class="box_left">
+                        <label for="password">Email:</label>
+
+                    </div>
+                    <div class="box_right">
+                        <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="page-footer">
+            <div class="footer-content" style="display:flex">
+                <div class="left-footer btn_left">
+                    <button type="button" class="btn" id="btn_close">Đóng</button>
+                </div>
+                <div class="right-footer">
+                    <button type="button" class="btn" id="btn_luu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<script src="~/js/view/admin/dictionary/khachhang.js"></script>

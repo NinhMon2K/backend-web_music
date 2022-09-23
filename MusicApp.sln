@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{00A0C315-01CE-44DB-8CA7-308A9C40CA42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLApp.Core.API", "QLApp.Core.API\QLApp.Core.API.csproj", "{847B28CB-1493-4316-B56A-95EA39159924}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLApp.Core.BL", "QLApp.Core.BL\QLApp.Core.BL.csproj", "{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLApp.Core.Entities", "QLApp.Core.Entities\QLApp.Core.Entities.csproj", "{D3017CF5-2771-4DE9-8E3D-862ED9F58871}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLApp.Library", "QLApp.Library\QLApp.Library.csproj", "{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLApp.UILibrary", "QLApp.UILibrary\QLApp.UILibrary.csproj", "{23117450-FC06-47AB-BDF9-7898BF06FE7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{847B28CB-1493-4316-B56A-95EA39159924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847B28CB-1493-4316-B56A-95EA39159924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847B28CB-1493-4316-B56A-95EA39159924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847B28CB-1493-4316-B56A-95EA39159924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3017CF5-2771-4DE9-8E3D-862ED9F58871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3017CF5-2771-4DE9-8E3D-862ED9F58871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3017CF5-2771-4DE9-8E3D-862ED9F58871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3017CF5-2771-4DE9-8E3D-862ED9F58871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23117450-FC06-47AB-BDF9-7898BF06FE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23117450-FC06-47AB-BDF9-7898BF06FE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23117450-FC06-47AB-BDF9-7898BF06FE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23117450-FC06-47AB-BDF9-7898BF06FE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{847B28CB-1493-4316-B56A-95EA39159924} = {00A0C315-01CE-44DB-8CA7-308A9C40CA42}
+		{4DC9D8E8-EB59-4940-9ED1-5C067BFA6BC1} = {00A0C315-01CE-44DB-8CA7-308A9C40CA42}
+		{D3017CF5-2771-4DE9-8E3D-862ED9F58871} = {00A0C315-01CE-44DB-8CA7-308A9C40CA42}
+		{ADCA6A1F-DE79-4D5D-9B30-921AD9CD8BA0} = {00A0C315-01CE-44DB-8CA7-308A9C40CA42}
+		{23117450-FC06-47AB-BDF9-7898BF06FE7A} = {00A0C315-01CE-44DB-8CA7-308A9C40CA42}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A778B878-E745-43D2-AC79-071A1CAA2FC1}
+	EndGlobalSection
+EndGlobal

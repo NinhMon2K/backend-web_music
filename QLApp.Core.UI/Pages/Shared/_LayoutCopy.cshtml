@@ -1,0 +1,53 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Quản lý giới thiệu món ăn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   
+    
+
+
+    <link href="~/lib/themify-icons/themify-icons.css" rel="stylesheet" />
+
+    <link href="~/lib/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+</head>
+<body>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+    <script src="~/js/util.js"></script>
+    <script src="~/js/ajax.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link href="~/css/control/toastr.css" rel="stylesheet" />
+    <script src="~/js/common/toastr.js"></script>
+
+    <link href="~/css/view/dictionary/_Layout.css" rel="stylesheet" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <link href="~/css/view/dictionary/table.css" rel="stylesheet" />
+    
+
+
+    <section>
+
+        <div class="main-layout">
+            @RenderBody()
+        </div>
+
+
+    </section>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
